@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        span{
+            display: inline-block;
+        }
+        .btn{
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: white;
+        }
+        #red{
+            background-color: red;
+        }
+        #teal{
+            background-color: teal;
+        }
+        #black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column text-center">
+                <span class="btn" id="white" onclick="changeBG('#fff')"></span>
+                <span class="btn" id="red" onclick="changeBG('#ff0000')"></span>
+                <span class="btn" id="teal" onclick="changeBG('#008080')"></span>
+                <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column text-center">
+                <h1 class="text">This is background color project</h1>
+                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus id nesciunt impedit, ullam sint pariatur aliquid, nihil dolorum quod neque laboriosam. Facere illum asperiores numquam quam, soluta reprehenderit reiciendis molestiae labore odio ea quisquam voluptatem maxime ipsum eum. Architecto quisquam corrupti officiis neque. Iusto quis voluptates harum repellat debitis repellendus.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text")
+            if(color == "#000000"){
+                for(let elm of txt){
+                    elm.style.color = "white";
+                }
+            }else{
+                for(let elm of txt){
+                    elm.style.color = "black    "
+                }
+            }
+        }
+    </script>
+</body>
+</html>
